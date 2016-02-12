@@ -15,5 +15,7 @@ Plan:
 7. Check user story
 
 
+Schema
 
+![schema](schema.png) 
 
