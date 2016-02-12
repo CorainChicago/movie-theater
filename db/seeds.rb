@@ -5,3 +5,27 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Movie.create([
+  {title: "Zoolander 2", rating: "PG-13", length: 102},
+  {title: "13 Hours:The Secret Soldiers Of Benghazi", rating: "R", length: 144},
+  ])
+
+Screen.create([
+  {name: "A", seat_count: 75},
+  ])
+
+Show.create([
+  {movie_id: 1, screen_id: 1},
+  {movie_id: 2, screen_id: 1},
+  ])
+
+
+Ticket.create([
+  {show_id: 1, email_address: "test@test.com"},
+  {show_id: 1, email_address: "test1@test.com"},
+  {show_id: 1, email_address: "test2@test.com"},
+  {show_id: 1, email_address: "test3@test.com"},
+  {show_id: 1, email_address: "test4@test.com"},
+  {show_id: 2, email_address: "test@test.com"},
+  ])
