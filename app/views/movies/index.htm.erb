@@ -1,0 +1,10 @@
+<div id="movies">
+
+  <% @movies.each do |movie| %>
+    <div class="show_movie">
+      <%=movie.title %>
+      <%=movie.rating %>
+      <%=movie.length %>
+    </div>  
+  <% end %>
+</div>
