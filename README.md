@@ -35,3 +35,9 @@ Add validations to models
 
 This is how time is formatted:  Time.utc(2015, 7, 1, 10, 5).to_s(:db) year, month, day, hour, minute 
 
+I need to get everything functioning before styling and adding details. 
+
+
+Should the user be able to purchase multiple tickets?
+
+
