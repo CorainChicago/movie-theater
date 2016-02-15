@@ -1,8 +1,9 @@
 class MoviesController < ApplicationController
 
   def index
-    @movies = Movie.all?
-    @movies.each do |movie|
-       
+    @movies = Movie.all   
   end
+
+  
+
 end

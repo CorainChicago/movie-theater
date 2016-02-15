@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :shows
-  resources :tickets
-  resources :movies
+  resources :movies do 
+    resources :shows do 
+      resources :tickets
+    end
+  end
+  root 'movies#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
