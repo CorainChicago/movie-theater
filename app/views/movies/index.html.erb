@@ -4,7 +4,8 @@
     <div class="show_movie">
       <%=movie.title %>
       <%=movie.rating %>
-      <%=movie.length %>
+      <%=movie.length %>min
+      <%= link_to "Get a Ticket", new_ticket_path %>
     </div>  
   <% end %>
 </div>

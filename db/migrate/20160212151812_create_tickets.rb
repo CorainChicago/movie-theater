@@ -2,7 +2,11 @@ class CreateTickets < ActiveRecord::Migration
   def change
     create_table :tickets do |t|
       t.integer :show_id
-      t.string :email_address
+      t.string  :first_name
+      t.string  :last_name
+      t.string  :email_address
+      t.integer :credit_card_number
+      t.integer :credit_cart_expiration_date
 
       t.timestamps null: false
     end

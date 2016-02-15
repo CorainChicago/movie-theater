@@ -16,8 +16,8 @@ Screen.create([
   ])
 
 Show.create([
-  {movie_id: 1, screen_id: 1},
-  {movie_id: 2, screen_id: 1},
+  {movie_id: 1, screen_id: 1, start_time:  DateTime.civil(2017, 8, 29, 22, 30, 0)},
+  {movie_id: 2, screen_id: 1, start_time:  DateTime.civil(2017, 5, 29, 18, 45, 0)},
   ])
 
 
