@@ -3,9 +3,8 @@ class CreateShows < ActiveRecord::Migration
     create_table :shows do |t|
       t.references :movie, index: true
       t.references :screen, index: true
-      t.time       :start_time
-      t.time       :end_time
-      t.date       :date 
+      t.datetime   :start_time
+      t.datetime   :end_time
 
       t.timestamps null: false
     end

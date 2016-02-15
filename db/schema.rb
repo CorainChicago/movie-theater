@@ -34,9 +34,8 @@ ActiveRecord::Schema.define(version: 20160212152230) do
   create_table "shows", force: :cascade do |t|
     t.integer  "movie_id"
     t.integer  "screen_id"
-    t.time     "start_time"
-    t.time     "end_time"
-    t.date     "date"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,9 +45,13 @@ ActiveRecord::Schema.define(version: 20160212152230) do
 
   create_table "tickets", force: :cascade do |t|
     t.integer  "show_id"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email_address"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer  "credit_card_number"
+    t.integer  "credit_cart_expiration_date"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end

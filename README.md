@@ -32,3 +32,6 @@ research best practices in admin system - decided to use the Restful routes and 
 need to add bootstrap
 
 Add validations to models
+
+This is how time is formatted:  Time.utc(2015, 7, 1, 10, 5).to_s(:db) year, month, day, hour, minute 
+
