@@ -29,3 +29,5 @@ show.end_time =  show.start_time + (60 * 102)
 
 research best practices in admin system - decided to use the Restful routes and permissions for handling the viewing
 
+need to add bootstrap
+
