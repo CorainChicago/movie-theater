@@ -1,5 +1,5 @@
 
-<%= form_for Ticket.new, url: {action: "create"} do |f| %>
+<%= form_for @ticket do |f| %>
   <%= f.label :first_name %>:
   <%= f.text_field :first_name, :placeholder =>"First Name" %><br />
   <%= f.label :last_name %>:
@@ -10,6 +10,5 @@
   <%= f.text_field :credit_card_number%><br />
   <%= f.label :credit_cart_expiration_date %>:
   <%= f.text_field :credit_cart_expiration_date%><br />
-
   <%= f.submit "See the Show" %>
 <% end %>
