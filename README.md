@@ -31,3 +31,4 @@ research best practices in admin system - decided to use the Restful routes and 
 
 need to add bootstrap
 
+Add validations to models
