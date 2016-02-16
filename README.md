@@ -15,6 +15,16 @@ Wireframing!!!!!
 6. Expand seed data
 7. Check user story
 
+List of items to complete:
+
+add validations to all models
+check credit card for being valid
+check email address for being valid
+make mailer work
+Make sure shows is unique
+
+
+
 
 Schema
 
@@ -46,6 +56,8 @@ Looked into gems for admin  - No, not worth the time yet until I know they will 
 
 
 Active Admin
+
+NOTE - FIX documenatation for ActiveAdmin for Rails 4,  'activeadmin', '1.0.0.pre2' see issues: https://github.com/activeadmin/activeadmin/issues/3926
 
 
 

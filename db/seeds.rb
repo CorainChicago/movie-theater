@@ -31,4 +31,4 @@ Ticket.create([
   {show_id: 1, email_address: "test3@test.com"},
   {show_id: 1, email_address: "test4@test.com"},
   {show_id: 2, email_address: "test@test.com"},
-  ])
+  ])AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

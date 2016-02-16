@@ -6,6 +6,7 @@ class TicketsController < ApplicationController
   end
 
   def create
+    byebug
     @ticket = Ticket.new(ticket_params)
     @show = Show.find(params[:show_id])
     if @ticket.save
