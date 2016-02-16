@@ -33,13 +33,17 @@ need to add bootstrap
 
 Add validations to models
 
-This is how time is formatted:  DateTime.new(2016, 2, 15,20,30) 
+This is how time is formatted:  DateTime.new(2016, 2, 15,20,30) Why was datetime so hards?
 
 http://ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/DateTime.html
 
 I need to get everything functioning before styling and adding details. 
 
 
-Should the user be able to purchase multiple tickets?
+Should the user be able to purchase multiple tickets? Nope
+
+
+
+
 
 

@@ -1,11 +1,19 @@
 <div id="movies">
 
   <% @movies.each do |movie| %>
-    <div class="show_movie">
-      <%=movie.title %>
-      <%=movie.rating %>
-      <%=movie.length %>min
-      <%= link_to "Get a Ticket", new_ticket_path %>
-    </div>  
-  <% end %>
-</div>
+    <div class="movie_listing">
+      <%= movie.title %>
+      <%= movie.rating %>
+      <%= movie.length %> minutes
+      <% movie.showings.each do |show| %>
+        <div class="times">
+          <%= show.starting_time.strftime("Starting at %I:%M%p") %>
+          <%= link_to "Get a Ticket", new_ticket_path %>
+        </div> 
+      <% end %>
+      </div> 
+    <% end %>
+</div>  
+
+
+  
