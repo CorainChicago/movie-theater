@@ -1,5 +1,5 @@
 
-<%= form_for @ticket do |f| %>
+<%= form_for [:show, @ticket] do |f| %>
   <%= f.label :first_name %>:
   <%= f.text_field :first_name %><br />
   <%= f.label :last_name %>:

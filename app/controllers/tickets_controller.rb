@@ -2,6 +2,7 @@ class TicketsController < ApplicationController
   
   def new
     @ticket = Ticket.new
+    @show = Show.find(params[:show_id])
   end
 
   def create
@@ -25,4 +26,5 @@ class TicketsController < ApplicationController
   def ticket_params
     params.require(:ticket).permit(:first_name, :last_name, :email_address, :credit_card_number, :credit_card_expiration_date) 
   end
+
 end

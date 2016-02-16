@@ -8,7 +8,7 @@
       <% movie.showings.each do |show| %>
         <div class="times">
           <%= show.starting_time.strftime("Starting at %I:%M%p") %>
-          <%= link_to "Get a Ticket", new_show_ticket_path(show) %>
+          <%= link_to "Get a Ticket", new_show_ticket_path(show.id) %>
         </div> 
       <% end %>
       </div> 
