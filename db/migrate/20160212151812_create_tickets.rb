@@ -6,7 +6,7 @@ class CreateTickets < ActiveRecord::Migration
       t.string  :last_name
       t.string  :email_address
       t.integer :credit_card_number
-      t.integer :credit_cart_expiration_date
+      t.integer :credit_card_expiration_date
 
       t.timestamps null: false
     end
