@@ -19,6 +19,7 @@ class TicketsController < ApplicationController
 
   def show
     @ticket = Ticket.find(params[:id])
+    @show = Show.find(params[:show_id])
   end
 
   private

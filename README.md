@@ -45,6 +45,8 @@ Should the user be able to purchase multiple tickets? Nope
 Looked into gems for admin  - No, not worth the time yet until I know they will work
 
 
+Active Admin
+
 
 
 
