@@ -1,10 +1,14 @@
 class TicketMailer < ApplicationMailer
 
-  default from: "chaysmagan@gmail.com"
-
-  def ticket_purchase(ticket)
+  # Subject can be set in your I18n file at config/locales/en.yml
+  # with the following lookup:
+  #
+  #   en.ticket_mailer.ticket_receipt.subject
+  #
+  def ticket_receipt(ticket)
     @ticket = ticket
-    @url = 'http:movietheather/ticket/new'
-    mail(to: @ticket.email_address, subject: "Movie Ticket Reciept")
+
+    mail to: @ticket.email_address, 
+         subject: "Receipt for #{@ticket.show.movie.title}"
   end
 end
