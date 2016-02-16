@@ -20,7 +20,7 @@ List of items to complete:
 add validations to all models
 check credit card for being valid
 check email address for being valid
-make mailer work
+X make mailer work
 Make sure shows is unique for screen, start_time and duration of movie
 Find way to check that all the tickets to a show aren't sold out
 Create header
@@ -31,6 +31,10 @@ create way to only display ticket show once
 add validations to ticket new
 check age of customer in new ticket form
 check age against rating
+Update language and format of emails
+Find way for user to edit emails ?
+Remove comments from admin section
+
 
 
 
