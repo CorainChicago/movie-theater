@@ -8,7 +8,7 @@ class TicketsController < ApplicationController
   def create
     @ticket = Ticket.new(ticket_params)
     if @ticket.save
-      TicketMailer.ticket_purchase(@ticket).deliver_later
+      TicketMailer.ticket_purchase(@ticket).deliver
       redirect_to ticket_path(@ticket.id)
     else
       @errors = @ticket.errors.full_messages

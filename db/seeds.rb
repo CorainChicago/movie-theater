@@ -15,9 +15,10 @@ Screen.create([
   {name: "A", seat_count: 75},
   ])
 
+t = DateTime.new(2016, 2, 16, 20, 30) 
 Show.create([
-  {movie_id: 1, screen_id: 1, start_time:  DateTime.civil(2017, 8, 29, 22, 30, 0)},
-  {movie_id: 2, screen_id: 1, start_time:  DateTime.civil(2017, 5, 29, 18, 45, 0)},
+  {movie_id: 1, screen_id: 1, start_time:  DateTime.new(2016, 2, 15, 20, 30) },
+  {movie_id: 2, screen_id: 1, start_time: t },
   ])
 
 

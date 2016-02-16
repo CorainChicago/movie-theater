@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Ticket, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  let(:ticket) {Ticket.new(:email_address => "corahays@yahoo.com")}
+
+  it 'sends an email' do
+    expect { ticket.ticket_purchase(ticket) }.to change { ActionMailer::Base.deliveries.count }.by(1)
+  end
+end
 end

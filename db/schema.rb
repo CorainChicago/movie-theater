@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 20160212152230) do
     t.integer  "movie_id"
     t.integer  "screen_id"
     t.datetime "start_time"
-    t.datetime "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
