@@ -7,10 +7,10 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = Ticket.new(ticket_params)
-    
+    @show = Show.find(params[:show_id])
     if @ticket.save
       TicketMailer.ticket_purchase(@ticket).deliver
-      redirect_to ticket_path(@ticket.id)
+      redirect_to show_ticket_path(@show.id, @ticket.id)
     else
       @errors = @ticket.errors.full_messages
       render 'tickets/new'
