@@ -33,7 +33,9 @@ need to add bootstrap
 
 Add validations to models
 
-This is how time is formatted:  Time.utc(2015, 7, 1, 10, 5).to_s(:db) year, month, day, hour, minute 
+This is how time is formatted:  DateTime.new(2016, 2, 15,20,30) 
+
+http://ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/DateTime.html
 
 I need to get everything functioning before styling and adding details. 
 

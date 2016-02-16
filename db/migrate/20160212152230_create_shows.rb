@@ -4,7 +4,6 @@ class CreateShows < ActiveRecord::Migration
       t.references :movie, index: true
       t.references :screen, index: true
       t.datetime   :start_time
-      t.datetime   :end_time
 
       t.timestamps null: false
     end
