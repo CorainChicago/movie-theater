@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   resources :shows
   resources :tickets
 
+  namespace :admin do
+    resources :shows, :screens, only: [:index, :new, :create, :destroy]
+    resources :tickets, only: [:index]
+  end
+
 
   root 'movies#index'
   # The priority is based upon order of creation: first created -> highest priority.
