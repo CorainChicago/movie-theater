@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  
   resources :movies 
-  resources :shows  
+  resources :shows
   resources :tickets
 
 
