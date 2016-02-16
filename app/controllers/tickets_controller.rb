@@ -2,11 +2,11 @@ class TicketsController < ApplicationController
   
   def new
     @ticket = Ticket.new
-    p params
   end
 
   def create
     @ticket = Ticket.new(ticket_params)
+    
     if @ticket.save
       TicketMailer.ticket_purchase(@ticket).deliver
       redirect_to ticket_path(@ticket.id)

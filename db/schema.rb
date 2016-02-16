@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(version: 20160212152230) do
   create_table "shows", force: :cascade do |t|
     t.integer  "movie_id"
     t.integer  "screen_id"
-    t.datetime "start_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "starting_time"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   add_index "shows", ["movie_id"], name: "index_shows_on_movie_id", using: :btree
