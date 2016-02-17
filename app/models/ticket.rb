@@ -4,6 +4,9 @@ class Ticket < ActiveRecord::Base
   validates :show_id, :first_name, :last_name, :email_address, presence: true
   validates :email_address, confirmation: true
 
+  
+
+
   def check_card_is_valid?(number)
     number = :credit_card_number
     array_of_numbers = []

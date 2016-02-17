@@ -9,8 +9,8 @@ class TicketsController < ApplicationController
     @ticket = Ticket.new(ticket_params)
     @show = Show.find(params[:show_id])
     @ticket.show_id = @show.id
-    cc_valid? = @ticket.check_card_is_valid?(@ticket.credit_card_number.to_i)
-    if @ticket.valid? && cc_valid?
+    cc_valid = @ticket.check_card_is_valid?(@ticket.credit_card_number.to_i)
+    if @ticket.valid? && cc_valid
       @ticket.credit_card_number = @ticket.credit_card_number.to_s.chars[-4..-1]
       @ticket.save
       @ticket.show.increment!(:seats_sold)
