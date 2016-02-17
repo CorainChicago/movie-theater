@@ -10,7 +10,7 @@
   <%= f.text_field :email_address_confirmation %><br />
   <%= f.label :credit_card_number %>:
   <%= f.text_field :credit_card_number %><br />
-  <%= f.label :credit_card_expiration_date %>:
-  <%= f.text_field :credit_card_expiration_date %><br />
-  <%= f.submit "See the Show" %>
+  <%= f.label :credit_card_expiration_date, 'Expiration date' %><br />
+  <%= f.date_select :credit_card_expiration_date, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :use_month_numbers => true %><br />
+  <%= f.submit "Buy the Movie Ticket" %>
 <% end %>
