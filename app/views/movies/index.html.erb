@@ -8,7 +8,11 @@
       <% movie.showings.each do |show| %>
         <div class="times">
           <%= show.starting_time.strftime("Starting at %I:%M%p") %>
-          <%= link_to "Get a Ticket", new_show_ticket_path(show.id) %>
+          <% if show.seats_sold >= show.screen.seat_count %>
+            Sold Out
+          <% else %>
+            <%= link_to "Get a Ticket", new_show_ticket_path(show.id) %>
+          <% end %>
         </div> 
       <% end %>
       </div> 
