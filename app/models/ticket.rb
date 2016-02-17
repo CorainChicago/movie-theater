@@ -1,4 +1,5 @@
 class Ticket < ActiveRecord::Base
+  attr_accessor :age
   belongs_to :show
 
   validates :show_id, :first_name, :last_name, :email_address, presence: true
