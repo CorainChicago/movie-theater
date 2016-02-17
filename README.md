@@ -34,6 +34,7 @@ check age against rating
 Update language and format of emails
 Find way for user to edit emails ?
 Remove comments from admin section
+Add jquery to hide show times until movie listing is clickec
 
 
 

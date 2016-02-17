@@ -6,6 +6,8 @@ gem 'rails', '4.2.4'
 gem 'activeadmin', '1.0.0.pre2'
 gem 'sass-rails'
 gem 'devise'
+
+gem 'faker'
   # gem "meta_search", '>= 1.1.0.pre'
 # Use postgresql as the database for Active Record
 gem 'pg'
