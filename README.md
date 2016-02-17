@@ -15,6 +15,31 @@ Wireframing!!!!!
 6. Expand seed data
 7. Check user story
 
+List of items to complete:
+
+add validations to all models
+check credit card for being valid
+check email address for being valid
+X make mailer work
+Make sure shows is unique for screen, start_time and duration of movie
+Find way to check that all the tickets to a show aren't sold out
+Create header
+style movie index
+style ticket new
+style ticket show
+create way to only display ticket show once
+add validations to ticket new
+check age of customer in new ticket form
+check age against rating
+Update language and format of emails
+Find way for user to edit emails ?
+Remove comments from admin section
+Add jquery to hide show times until movie listing is clickec
+
+
+
+
+
 
 Schema
 
@@ -44,6 +69,10 @@ Should the user be able to purchase multiple tickets? Nope
 
 Looked into gems for admin  - No, not worth the time yet until I know they will work
 
+
+Active Admin
+
+NOTE - FIX documenatation for ActiveAdmin for Rails 4,  'activeadmin', '1.0.0.pre2' see issues: https://github.com/activeadmin/activeadmin/issues/3926
 
 
 

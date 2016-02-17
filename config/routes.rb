@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
   
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :movies 
-  resources :shows
-  resources :tickets
+  resources :shows do
+    resources :tickets
+  end  
+
+  # namespace :admin do
+  #   resources :shows, :screens, only: [:index, :new, :create, :destroy]
+  #   resources :tickets, only: [:index]
+  # end
 
 
   root 'movies#index'

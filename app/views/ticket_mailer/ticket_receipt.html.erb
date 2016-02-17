@@ -1,0 +1,15 @@
+<h2>Here is your receipt for the movie ticket purchased:</h2>
+
+<ul>
+  <li>Movie Title: <%= @ticket.show.movie.title %></li>
+  <li>Starting Time: <%= @ticket.show.starting_time.strftime("%I:%Mp") %> </li>
+  <li>Date: <%= @ticket.show.starting_time.strftime("%A, %B %d, %Y") %> </li>
+  <li>Screen: <%= @ticket.show.screen.name %> </li>
+</ul>
+
+<p>Please bring your ID to the box office to pick up your tickets before the show. </p>
+
+<p>Thank you and enjoy the movie,</p>
+
+<p>MovieTheater</p>
+
