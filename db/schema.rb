@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20160216142620) do
   create_table "shows", force: :cascade do |t|
     t.integer  "movie_id"
     t.integer  "screen_id"
+    t.integer  "seats_sold"
     t.datetime "starting_time"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -80,7 +81,7 @@ ActiveRecord::Schema.define(version: 20160216142620) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email_address"
-    t.integer  "credit_card_number"
+    t.string   "credit_card_number"
     t.integer  "credit_card_expiration_date"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
