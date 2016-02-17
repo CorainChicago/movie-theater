@@ -30,7 +30,7 @@ class TicketsController < ApplicationController
   private
 
   def ticket_params
-    params.require(:ticket).permit(:first_name, :last_name, :email_address, :credit_card_number, :credit_card_expiration_date) 
+    params.require(:ticket).permit(:first_name, :last_name, :email_address, :credit_card_number, :credit_card_expiration_date, :age) 
   end
 
 end
