@@ -9,8 +9,10 @@ class TicketsController < ApplicationController
     @ticket = Ticket.new(ticket_params)
     @show = Show.find(params[:show_id])
     @ticket.show_id = @show.id
-    if @ticket.valid? && @ticket.check_card_is_valid?(@ticket.credit_card_number)
-      @ticket.credit_card_number = @ticket.credit_card_number.to_s[-4..-1]
+    valid = @ticket.check_card_is_valid?(@ticket.credit_card_number.to_i)
+    byebug
+    if @ticket.valid? &&
+      @ticket.credit_card_number = @ticket.credit_card_number.to_s.chars[-4..-1]
       @ticket.save
       TicketMailer.ticket_receipt(@ticket).deliver_now
       redirect_to show_ticket_path(@show.id, @ticket.id)
