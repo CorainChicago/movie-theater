@@ -18,19 +18,19 @@ Wireframing!!!!!
 List of items to complete:
 
 add validations to all models
-check credit card for being valid
+X check credit card for being valid
 check email address for being valid
 X make mailer work
 Make sure shows is unique for screen, start_time and duration of movie
 Find way to check that all the tickets to a show aren't sold out
-Create header
-style movie index
-style ticket new
-style ticket show
+X Create header
+Xstyle movie index
+X style ticket new
+X style ticket show
 create way to only display ticket show once
 add validations to ticket new
-check age of customer in new ticket form
-check age against rating
+X check age of customer in new ticket form
+X check age against rating
 Update language and format of emails
 Find way for user to edit emails ?
 Remove comments from admin section
