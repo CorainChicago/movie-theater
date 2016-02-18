@@ -14,7 +14,6 @@ class TicketsController < ApplicationController
       @age = Date.new(@age[0].to_i, @age[1].to_i, @age[2].to_i)
     end
     if @ticket.valid? 
-      # @ticket.credit_card_number = @ticket.credit_card_number.to_s.chars[-4..-1]
       @ticket.save
       @ticket.show.increment!(:seats_sold)
       TicketMailer.ticket_receipt(@ticket).deliver_now
@@ -26,10 +25,7 @@ class TicketsController < ApplicationController
     end
   end
 
-  def show
-    @ticket = Ticket.find(params[:id]) 
-    @show = Show.find(params[:show_id])
-  end
+
 
   private
 
