@@ -10,6 +10,8 @@ require 'faker'
 Movie.create([
   {title: "Zoolander 2", rating: "PG-13", length: 102},
   {title: "13 Hours:The Secret Soldiers Of Benghazi", rating: "R", length: 144},
+  {title: "Star Wars: The Force Awakens", rating: "PG-13", length: 136},
+  {title: "How to Be Single", rating: "R", length: 110},
   ])
 
 Screen.create([
@@ -20,18 +22,31 @@ Screen.create([
 
 Show.create([
   {movie_id: 1, screen_id: 1, starting_time:  DateTime.new(2016, 10, 31, 6, 30, 2) },
-  {movie_id: 1, screen_id: 1, starting_time:  DateTime.new(2016, 10, 31, 18, 40, 2) },
-  {movie_id: 1, screen_id: 1, starting_time:  DateTime.new(2016, 10, 31, 20, 50, 2) },
-  {movie_id: 2, screen_id: 1, starting_time:  DateTime.new(2016, 10, 31, 18, 45, 2) },
+  {movie_id: 2, screen_id: 1, starting_time:  DateTime.new(2016, 10, 31, 18, 40, 2) },
+  {movie_id: 3, screen_id: 1, starting_time:  DateTime.new(2016, 10, 31, 20, 50, 2) },
+  {movie_id: 4, screen_id: 1, starting_time:  DateTime.new(2016, 10, 31, 18, 45, 2) },
   ])
+
+
+
+55.times do
+  Ticket.create(show_id: 3, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email_address: Faker::Internet.email)
+end
 
 
 Ticket.create([
-  {show_id: 1, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email_address: "test@test.com"},
-  {show_id: 1, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email_address: "test1@test.com"},
-  {show_id: 1, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email_address: "test2@test.com"},
-  {show_id: 1, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email_address: "test3@test.com"},
-  {show_id: 1, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email_address: "test4@test.com"},
-  {show_id: 2, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email_address: "test@test.com"},
+  {show_id: 1, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email_address: Faker::Internet.email },
+  {show_id: 2, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email_address: Faker::Internet.email},
+  {show_id: 4, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email_address: Faker::Internet.email},
+  {show_id: 1, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email_address: Faker::Internet.email},
+  {show_id: 2, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email_address: Faker::Internet.email},
   ])
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+
+shows = Show.all
+shows.each do |show|
+  tickets = Ticket.where(show_id: show.id)
+  show.seats_sold = tickets.count
+  show.save
+end
+
+# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

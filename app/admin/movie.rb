@@ -1,6 +1,16 @@
 ActiveAdmin.register Movie do
   permit_params :title, :rating, :length
 
+  filter :screens
+  filter :showings
+  
+  index do 
+    column :title
+    column :rating
+    column :length 
+    column ("Number of Showings") { |movie| movie.showings.size }
+  end
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
