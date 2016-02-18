@@ -21,7 +21,9 @@ class TicketsController < ApplicationController
       redirect_to root_path
     else
       @errors = @ticket.errors.full_messages
-      render 'tickets/new', locals: {ticket: @ticket.age = nil}
+      @ticket.credit_card_number = 0
+      @ticket.age = nil
+      render 'tickets/new', locals: {ticket: @ticket}
     end
   end
 

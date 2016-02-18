@@ -2,7 +2,9 @@
 
 **A Rails app for a movie theater to handle ticket sales**
 
-Test credit card number: 79927398710, 79927398711, 79927398712, 79927398713, 79927398714, 79927398715, 79927398716, 79927398717, 79927398718, 79927398719
+Test credit card number: 5303765013600904
+
+DO NOT USE YOUR CREDIT CARD - SO UNSECURE!!!
 
 First Plan:
 
@@ -17,14 +19,14 @@ Wireframing!!!!!
 6. Expand seed data
 7. Check user story
 
-List of items to complete:
+List of items to complete ('X' means done):
 
-* add validations to all models
+* X add validations to all models
 * X check credit card for being valid
-* check email address for being valid
+* X check email address for being valid
 * X make mailer work
-* Make sure shows is unique for screen, start_time and duration of movie
-* Find way to check that all the tickets to a show aren't sold out
+* X Make sure shows is unique for screen, start_time and duration of movie
+* X Find way to check that all the tickets to a show aren't sold out
 * X Create header
 * X style movie index
 * X style ticket new
@@ -33,8 +35,8 @@ List of items to complete:
 * X check age of customer in new ticket form
 * X check age against rating
 * Update language and format of emails
-* Find way for user to edit emails ?
-* Remove comments from admin section
+* ~~Find way for user to edit emails ~~ not part of the user story
+* X Remove comments from admin section
 
 
 
