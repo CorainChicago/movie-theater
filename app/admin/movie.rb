@@ -1,6 +1,9 @@
 ActiveAdmin.register Movie do
   permit_params :title, :rating, :length
 
+  filter :screens
+  filter :showings
+  
   index do 
     column :title
     column :rating
