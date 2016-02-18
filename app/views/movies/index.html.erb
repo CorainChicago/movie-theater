@@ -2,18 +2,16 @@
 
   <% @movies.each do |movie| %>
     <div class="col-md-4 bottom-buffer">
-      <h2><%= movie.title %></h2>
+      <h3><%= movie.title %></h3>
       <ul>
           <li><%= movie.rating %>  <%= movie.length %> minutes</li>
         <% movie.showings.each do |show| %>
-          <div class="">
-            <li><%= show.starting_time.strftime("Starting at %I:%M%p") %></li>
-            <% if show.seats_sold >= show.screen.seat_count %>
+            <%= show.starting_time.strftime("Starting at %I:%M%p") %>
+            <% if show.seats_sold == show.screen.seat_count %>
               Sold Out
             <% else %>
-              <li><%= link_to "Get a Ticket", new_show_ticket_path(show.id) %></li>
+              <%= link_to "Get a Ticket", new_show_ticket_path(show.id) %>
             <% end %>
-          </div> 
         <% end %>
       </ul>
       </div> 

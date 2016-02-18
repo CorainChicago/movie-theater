@@ -19,61 +19,52 @@ Wireframing!!!!!
 
 List of items to complete:
 
-add validations to all models
-X check credit card for being valid
-check email address for being valid
-X make mailer work
-Make sure shows is unique for screen, start_time and duration of movie
-Find way to check that all the tickets to a show aren't sold out
-X Create header
-Xstyle movie index
-X style ticket new
-X style ticket show
-X add validations to ticket new
-X check age of customer in new ticket form
-X check age against rating
-Update language and format of emails
-Find way for user to edit emails ?
-Remove comments from admin section
-Add jquery to hide show times until movie listing is clickec
+* add validations to all models
+* X check credit card for being valid
+* check email address for being valid
+* X make mailer work
+* Make sure shows is unique for screen, start_time and duration of movie
+* Find way to check that all the tickets to a show aren't sold out
+* X Create header
+* X style movie index
+* X style ticket new
+* X style ticket show
+* X add validations to ticket new
+* X check age of customer in new ticket form
+* X check age against rating
+* Update language and format of emails
+* Find way for user to edit emails ?
+* Remove comments from admin section
 
 
 
 
 
 
-Schema
+
+Schema - First Version
 
 ![schema](schema.png) 
 
 
 *Notes:*
 
-Math to find the end time:
+* Math to find the end time:
 
-show.end_time =  show.start_time + (60 * 102)
+* show.end_time =  show.start_time + (60 * 102)
 
-research best practices in admin system - decided to use the Restful routes and permissions for handling the viewing
+* research best practices in admin system - ~~decided to use the Restful routes and permissions for handling the viewing~~ Was advised to try ActiveAdmin after I tried a few other gems (the Thoughtbot gem is not complete yet and I learned that the hard way)
 
-need to add bootstrap
+*  need to add bootstrap
 
-Add validations to models
+* Add validations to models
 
-This is how time is formatted:  DateTime.new(2016, 2, 15,20,30) Why was datetime so hards?
+* This is how time is formatted:  DateTime.new(2016, 2, 15,20,30) Why was datetime so hards? http://ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/DateTime.html
 
-http://ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/DateTime.html
+* I need to get everything functioning before styling and adding details. 
 
-I need to get everything functioning before styling and adding details. 
+* Should the user be able to purchase multiple tickets? Nope
 
-
-Should the user be able to purchase multiple tickets? Nope
-
-Looked into gems for admin  - No, not worth the time yet until I know they will work
-
-
-Active Admin
-
-NOTE - FIX documenatation for ActiveAdmin for Rails 4,  'activeadmin', '1.0.0.pre2' see issues: https://github.com/activeadmin/activeadmin/issues/3926
 
 
 
