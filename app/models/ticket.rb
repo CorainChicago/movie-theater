@@ -4,6 +4,7 @@ class Ticket < ActiveRecord::Base
 
   validates :show_id, :first_name, :last_name, :email_address, presence: true
   validates :email_address, confirmation: true
+  # validate :check_age
 
   
 
