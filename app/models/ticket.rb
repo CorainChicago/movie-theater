@@ -1,10 +1,12 @@
 class Ticket < ActiveRecord::Base
-  attr_accessor :age
+  attr_accessor :age 
   belongs_to :show
 
   validates :show_id, :first_name, :last_name, :email_address, presence: true
   validates :email_address, confirmation: true
-  # validate :check_age
+  validates :credit_card_number, length: { minimum: 13 }
+  validates :credit_card_number, length: { maximum: 19 }
+  validate  :check_age
 
   
 
@@ -27,6 +29,15 @@ class Ticket < ActiveRecord::Base
     n = number.to_s.split('')
     unless total % 10 == 0 || n.size >= 13 && n.size <=19
       errors.add(:credit_card_number, "has an error, please check the numbers")
+    end
+  end
+
+  def check_age
+    age_to_validate = Date.new(@age[1], @age[2], @age[3])
+    if age_to_validate <= Date.current - 18.years
+      return true
+    else
+      errors.add(:age, "needs to be at least 18 years old to purchase the ticket.")
     end
   end
   
