@@ -17,7 +17,7 @@
   <%= f.date_select :credit_card_expiration_date, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :use_month_numbers => true %><br />
   <% if @show.movie.rating == "R" %>
     <%= f.label :age, "This movie is rated 'R'. Please provide your birthdate to purchase the ticket" %><br />
-    <%= f.date_select :age, :start_year => Date.today.year, :end_year => (Date.today.year-100) %><br />
+    <%= f.date_select :age, :start_year => Time.now.year - 10, :end_year => (Time.now.year - 100) %><br />
   <% end %>
   <%= f.submit "Buy the Movie Ticket" %>
 <% end %>
