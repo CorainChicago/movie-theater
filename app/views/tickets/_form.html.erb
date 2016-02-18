@@ -2,22 +2,36 @@
   <li>Movie: <%= @show.movie.title %></li>
   <li>Showtime: <%= @show.starting_time.strftime("%A, %B %d, %Y at %I:%Mpm") %></li>
 </ul>
-<%= form_for [:show, @ticket] do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %><br />
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %><br />
-  <%= f.label :email_address %>
-  <%= f.text_field :email_address %><br />
-  <%= f.label :email_address_confirmation %>
-  <%= f.text_field :email_address_confirmation %><br />
-  <%= f.label :credit_card_number %>
-  <%= f.text_field :credit_card_number %><br />
-  <%= f.label :credit_card_expiration_date, 'Expiration date' %><br />
+<%= form_for [:show, @ticket], :html => {:class=>"form-horizontal center", :role=>"form"} do |f| %>
+  <div class="form-group">
+    <%= f.label :first_name, class:"control-label col-sm-2" %>
+    <%= f.text_field :first_name %><br />
+  </div>
+  <div class="form-group">
+    <%= f.label :last_name, class:"control-label col-sm-2" %>
+    <%= f.text_field :last_name %><br />
+  </div>
+  <div class="form-group">
+    <%= f.label :email_address, class:"control-label col-sm-2" %>
+    <%= f.text_field :email_address %><br />
+  </div>
+  <div class="form-group">
+    <%= f.label :email_address_confirmation, class:"control-label col-sm-2" %>
+    <%= f.text_field :email_address_confirmation %><br />
+  </div>
+  <div class="form-group">
+    <%= f.label :credit_card_number, class:"control-label col-sm-2" %>
+    <%= f.text_field :credit_card_number %><br />
+  </div>
+  <div class="form-group">
+  <%= f.label :credit_card_expiration_date, 'Expiration date' , class:"control-label col-sm-2" %><br />
   <%= f.date_select :credit_card_expiration_date, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :use_month_numbers => true %><br />
+  </div>
   <% if @show.movie.rating == "R" %>
-    <%= f.label :age, "This movie is rated 'R'. Please provide your birthdate to purchase the ticket" %><br />
-    <%= f.date_select :age, :start_year => Time.now.year - 10, :end_year => (Time.now.year - 100) %><br />
+    <div class="form-group">
+      <%= f.label :age, "This movie is rated 'R'. Please provide your birthdate to purchase the ticket", class:"control-label col-sm-2" %><br />
+      <%= f.date_select :age, :start_year => Time.now.year - 10, :end_year => (Time.now.year - 100) %><br />
+    </div>
   <% end %>
   <%= f.submit "Buy the Movie Ticket" %>
 <% end %>
