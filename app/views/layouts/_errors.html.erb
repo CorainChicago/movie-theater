@@ -1,5 +1,7 @@
-<% if @errors%>
-  <% @errors.each do |error| %>
-    <p><%= error %></p>
+<div class="alert-danger">
+  <% if @errors%>
+    <% @errors.each do |error| %>
+      <p><%= error %></p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
