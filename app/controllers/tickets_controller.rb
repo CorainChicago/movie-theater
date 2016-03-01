@@ -27,8 +27,6 @@ class TicketsController < ApplicationController
     end
   end
 
-
-
   private
 
   def ticket_params
