@@ -10,20 +10,17 @@ class TicketsController < ApplicationController
     @show = Show.find(params[:show_id])
     @ticket.show_id = @show.id
     if ticket_params.has_key?(:age)
-      @age = [ticket_params["age(1i)"], ticket_params["age(2i)"], ticket_params["age(3i)"]]
-      @age = Date.new(@age[0].to_i, @age[1].to_i, @age[2].to_i)
+      @ticket.create_age(ticket_params)
     end
-    if @ticket.valid? 
-      @ticket.save
+    if @ticket.save
       @ticket.show.increment!(:seats_sold)
       TicketMailer.ticket_receipt(@ticket).deliver_now
       flash[:notice] = "Your ticket to #{@show.movie.title} was purchased.  Please look for an email with your receipt. "
       redirect_to root_path
     else
       @errors = @ticket.errors.full_messages
-      @ticket.credit_card_number = 0
-      @ticket.age = nil
-      render 'tickets/new', locals: {ticket: @ticket}
+      reset_cc_and_age(@ticket)
+      render 'tickets/new', locals: { ticket: @ticket }
     end
   end
 
