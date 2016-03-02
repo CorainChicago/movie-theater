@@ -8,4 +8,4 @@ RSpec.describe Ticket, type: :model do
     expect { ticket.ticket_purchase(ticket) }.to change { ActionMailer::Base.deliveries.count }.by(1)
   end
 end
-end
+3
