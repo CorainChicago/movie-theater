@@ -11,6 +11,15 @@ class Ticket < ActiveRecord::Base
   validate  :check_card_is_valid?
 
 
+  def create_age(ticket_params)
+    @age = [ticket_params["age(1i)"], ticket_params["age(2i)"], ticket_params["age(3i)"]]
+    @age = Date.new(@age[0].to_i, @age[1].to_i, @age[2].to_i)
+  end
+
+  def reset_cc_and_age(ticket)
+    ticket.credit_card_number = 0
+    ticket.age = nil
+  end
 
   def check_card_is_valid?
     array_of_numbers = []
